@@ -1,3 +1,11 @@
 *.aux
 *.pdf
 *.bbl
+*.bcf
+*.blg
+*.fls
+*.fdb_latexmk
+*.xml
+*.gz
+*.log
+*.toc

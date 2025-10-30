@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
-\usepackage{fontspec}
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{geometry}
@@ -12,15 +11,29 @@
 \usepackage{amsmath, amssymb}
 \usepackage{tikz}
 \usepackage{multicol}
-\usepackage{kantlipsum}
 \usepackage{afterpage}
-\usepackage{tgpagella}
+\usepackage{titlesec}
+\usepackage[titles]{tocloft}
+% \usepackage{tgpagella}
 \usepackage[backend=biber, style=apa]{biblatex}
 \addbibresource{references.bib}
-\setmainfont{gfd}
+
 \geometry{margin=2.5cm}
 
 \definecolor{chaptercover}{HTML}{ECF4E8}
+
+% INICIO - TABLA DE CONTENIDO CUSTOMIZADA
+\renewcommand\cftchapfont{\normalfont}
+\renewcommand\cftchappagefont{\normalfont}
+
+\AtBeginDocument{\renewcommand\contentsname{Tabla de Contenido}}
+\titleformat{\chapter}[display]
+{}{\hfill\rule{.7\textwidth}{3pt}}{0pt}
+{\hspace*{.3\textwidth}\huge\bfseries}[\addvspace{-1pt}]
+\titleformat{name=\chapter,numberless}[display]
+{}{\hfill\rule{.7\textwidth}{3pt}}{0pt}
+{\hspace*{.3\textwidth}\huge\bfseries}[\addvspace{-1pt}]
+% FIN - TABLA DE CONTENIDO CUSTOMIZADA
 
 \makeatletter
 \newcommand{\styledchapter}[2][]{
@@ -65,8 +78,8 @@
 \parbox{10cm}{
 \begin{raggedright}
 \textit{
-“El calor no se crea ni se destruye, solo se escapa de los exámenes de física.”}
-\vspace{.5cm}\hfill{--- Alguien exhausto}
+“No debí elegir esta carrera”}
+\vspace{.5cm}\hfill{ \-\-\- Alguien exhausto}
 
 \end{raggedright}}
 \end{center}
@@ -80,6 +93,7 @@
 \include{chapters/cap03}
 \include{chapters/cap04}
 \include{chapters/cap05}
+\include{chapters/cap06}
 
 \nocite{*}
 \printbibliography
