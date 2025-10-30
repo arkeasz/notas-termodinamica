@@ -1,0 +1,86 @@
+\documentclass[12pt,a4paper]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{geometry}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{kantlipsum}
+\usepackage{afterpage}
+\usepackage{tgpagella}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{references.bib}
+\setmainfont{gfd}
+\geometry{margin=2.5cm}
+
+\definecolor{chaptercover}{HTML}{ECF4E8}
+
+\makeatletter
+\newcommand{\styledchapter}[2][]{
+  \clearpage
+  \thispagestyle{empty}
+  \refstepcounter{chapter}
+  \markboth{#1}{#1}
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[chaptercover] (current page.south west) rectangle (current page.north east);
+    \node[anchor=south east, xshift=-1cm, yshift=1cm, color=black, font=\fontsize{60}{72}\bfseries] 
+      at (current page.south east) {\thechapter};
+    \node[anchor=center, color=black, font=\Huge\bfseries, align=center] 
+      at (current page.center) {#2};
+  \end{tikzpicture}
+  \clearpage
+  \addcontentsline{toc}{chapter}{\ifx\relax#1\relax#2\else#1\fi}%
+}
+\makeatother
+
+
+
+\begin{document}
+
+\begin{titlepage}
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+      \includegraphics[width=\paperwidth,height=\paperheight]{figures/cover.png}%
+    }%
+  }
+  \centering
+  \vspace*{6cm}
+  {\fontsize{36}{89}\selectfont\bfseries\color{white} Termodinámica}\\[2em]
+  {\Large\color{white!90} Notas de Estudio}\\[2em]
+  {\large\color{white!60} \today}
+\end{titlepage}
+
+\clearpage
+\thispagestyle{empty}
+\vspace*{2cm}
+\begin{center}
+\Large
+\parbox{10cm}{
+\begin{raggedright}
+\textit{
+“El calor no se crea ni se destruye, solo se escapa de los exámenes de física.”}
+\vspace{.5cm}\hfill{--- Alguien exhausto}
+
+\end{raggedright}}
+\end{center}
+\clearpage
+
+\tableofcontents
+
+% Capítulos
+\include{chapters/cap01}
+\include{chapters/cap02}
+\include{chapters/cap03}
+\include{chapters/cap04}
+\include{chapters/cap05}
+
+\nocite{*}
+\printbibliography
+\end{document}
