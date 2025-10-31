@@ -6,21 +6,39 @@
 \usepackage{graphicx}
 \usepackage{eso-pic}
 \usepackage{geometry}
-\usepackage{lmodern}
 \usepackage{xcolor}
+\usepackage{enumitem}
 \usepackage{amsmath, amssymb}
 \usepackage{tikz}
 \usepackage{multicol}
 \usepackage{afterpage}
-\usepackage{titlesec}
 \usepackage[titles]{tocloft}
-% \usepackage{tgpagella}
-\usepackage[backend=biber, style=apa]{biblatex}
-\addbibresource{references.bib}
+\usepackage{lmodern}
 
+\usepackage[backend=biber, sorting=ynt, style=alphabetic, language=spanish]{biblatex}
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\itshape}{\thesubsubsection}{1em}{}
+
+\addbibresource{references.bib}
+\setlist[description]{%
+  topsep=30pt,               
+  itemsep=5pt,            
+  font={\bfseries\sffamily}, 
+}
 \geometry{margin=2.5cm}
 
 \definecolor{chaptercover}{HTML}{ECF4E8}
+
 
 % INICIO - TABLA DE CONTENIDO CUSTOMIZADA
 \renewcommand\cftchapfont{\normalfont}
@@ -50,6 +68,8 @@
   \end{tikzpicture}
   \clearpage
   \addcontentsline{toc}{chapter}{\ifx\relax#1\relax#2\else#1\fi}%
+  \clearpage
+  \pagestyle{plain}
 }
 \makeatother
 
