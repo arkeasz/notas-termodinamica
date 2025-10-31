@@ -1,43 +1,53 @@
-\styledchapter[Gran potencial Termodinámico]{Gran Potencial Termodinámico}
+
+
+\styledchapter[Gran Potencial Termodinámico]{Gran Potencial Termodinámico}
+
+\section{Definición del Gran Potencial}
 
 El gran potencial se define como:
-$$
-\Phi_G = U - TS - \mu N
-$$
+\begin{equation}
+\Phi_G = U - TS - \mu N \tag{4.1}
+\end{equation}
 
 Entonces, su diferencial es:
-$$
-d\Phi_G = -S\,dT - P\,dV - N\,d\mu
-$$
+\begin{equation}
+d\Phi_G = -S\,dT - P\,dV - N\,d\mu \tag{4.2}
+\end{equation}
 
 Esta relación se obtiene a partir de:
-$$
-dU = T\,dS - P\,dV + \mu\,dN
-$$
+\begin{equation}
+dU = T\,dS - P\,dV + \mu\,dN \tag{4.3}
+\end{equation}
 
 Sustituyendo en la definición de $\Phi_G = U - TS - \mu N$, se obtiene el resultado anterior.
+
+\section{Dependencia funcional y naturaleza extensiva}
 
 Por tanto, $\Phi_G = \Phi_G(T, V, \mu)$.
 
 Nótese que las variables $T$ y $\mu$ son intensivas, mientras que $\Phi_G$ es extensiva, de modo que debe ser proporcional al volumen:
-$$
-\Phi_G = V\,\phi_G(T, \mu)
-$$
+\begin{equation}
+\Phi_G = V\,\phi_G(T, \mu) \tag{4.4}
+\end{equation}
+
+\section{Relación entre el gran potencial y la presión}
 
 Derivando respecto de $V$ a $T$ y $\mu$ constantes:
-$$
-\phi_G(T, \mu) = \left( \frac{\partial \Phi_G}{\partial V} \right)_{T, \mu} = -P
-$$
+\begin{equation}
+\phi_G(T, \mu) = \left( \frac{\partial \Phi_G}{\partial V} \right)_{T, \mu} = -P \tag{4.5}
+\end{equation}
 por lo tanto:
-$$
-\Phi_G = -P\,V
-$$
+\begin{equation}
+\Phi_G = -P\,V \tag{4.6}
+\end{equation}
+
+\section{Relación con la energía libre de Gibbs}
 
 Esto es consistente con el hecho de que el potencial químico $\mu$ es la energía libre de Gibbs por partícula:
-$$
-\mu N = G = U - TS + P V
-$$
-y, en consecuencia,
-$$
-P V = - (U - TS - \mu N) = -\Phi_G.
-$$
+\begin{equation}
+\mu N = G = U - TS + PV \tag{4.7}
+\end{equation}
+y, en consecuencia:
+\begin{equation}
+PV = - (U - TS - \mu N) = -\Phi_G.
+\end{equation}

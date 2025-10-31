@@ -1,51 +1,65 @@
-\styledchapter[Tercer Ley de la Termodinámica]{Tercera ley \\ de la Termodinámica}
-\begin{center}
-Cuando la temperatura de un sistema se aproxima al cero absoluto (0 K), la entropía tiende a un valor constante (en general, cero para un cristal perfecto).
-\end{center}
-Ahora llamado el teorema de calor ("heat theorem") nos afirma que no se puede alcanzar el cero absoluto en un número finito de sistemas.
+\styledchapter[Tercera Ley de la Termodinámica]{Tercera ley de la Termodinámica}
+
+\section{Introducción}
+Cuando la temperatura de un sistema se aproxima al cero absoluto (0 K), la entropía tiende a un valor constante (en general, cero para un cristal perfecto).  
+Ahora llamado el teorema de calor ("heat theorem"), afirma que no se puede alcanzar el cero absoluto en un número finito de procesos.
+
 Haciendo un recorrido por todos los conceptos anteriores, sabemos:
 \begin{itemize}
-    \item La primera ley nos dice que la energía no se crea ni se destruye solo se transforma.
-    \item La segunda ley nos introduce el concepto de la entropía (de manera sencilla la podemos definir como el desorden) y que por tanto la entropía en el universo siempre incrementa.
-    \item A mayor dispersión de energía, mayor entropía
-    
+    \item La primera ley establece que la energía no se crea ni se destruye, solo se transforma.
+    \item La segunda ley introduce el concepto de entropía (entendida como el desorden), indicando que la entropía total del universo siempre incrementa.
+    \item A mayor dispersión de energía, mayor entropía.
 \end{itemize}
-Es así que entramos con la tercera ley de la termodinámica mencionada al inicio de la página. Hay que considerar que la tercera ley es más importante d e lo que parece, ya que no es sólo afirmar que la entropía absoluta se anula en el cero absoluto.
 
-\begin{center}
-    \Large\textbf{Hipótesis de Nernst}
-\end{center}
+Es así que llegamos a la tercera ley de la termodinámica mencionada al inicio.  
+Esta ley es más importante de lo que parece, ya que no solo afirma que la entropía absoluta se anula en el cero absoluto.
 
-El \textbf{postulado de Nernst} constituye un enunciado alternativo de la \textbf{Tercera Ley de la Termodinámica}. 
+\section{Hipótesis de Nernst}
+El \textbf{postulado de Nernst} constituye un enunciado alternativo de la \textbf{Tercera Ley de la Termodinámica}.  
 Establece que, en un \textit{proceso isotérmico finito} llevado a cabo en un \textit{sistema cerrado}, 
-no es necesario conocer los detalles del proceso para determinar los cambios en las funciones de estado del sistema. 
+no es necesario conocer los detalles del proceso para determinar los cambios en las funciones de estado del sistema.  
 
 En otras palabras, al aproximarse la temperatura al cero absoluto, las variaciones de entropía tienden a desaparecer, 
 y el estado final del sistema se vuelve independiente del camino seguido.
 
-\begin{center}
-    \textbf{Inalcansabilidad del cero absoluto}
-\end{center}
-Como se mencionó anteriormente una consecuencia directa de la tercera ley de la Termodinámica es que el cero absoluto de temperatura no puede alcanzarse mediante un número finito de operaciones físicas. En otras palabras, ningún proceso termodinámico puede reducir la temperatura de un sistema hasta $T=0K$ en un número finito de pasos. Matemáticamente, la eficiencia de los métodos de enfriamiento disminuye drásticamente conforme $T$ se aproxima a cero, haciendo imposible alcanzar el cero absoluto en la práctica.
+\section{Inalcanzabilidad del cero absoluto}
+Una consecuencia directa de la Tercera Ley de la Termodinámica es que el cero absoluto de temperatura no puede alcanzarse mediante un número finito de operaciones físicas.  
+Ningún proceso termodinámico puede reducir la temperatura de un sistema hasta $T = 0\,\mathrm{K}$ en un número finito de pasos.  
+Matemáticamente, la eficiencia de los métodos de enfriamiento disminuye drásticamente conforme $T$ se aproxima a cero, haciendo imposible alcanzar el cero absoluto en la práctica.
 
-\begin{center}
-\textbf{Consecuencias de la tercera ley}
-\end{center}
+\section{Consecuencias de la tercera ley}
 
-\begin{description}
-    \item[Coeficiente de expansión]{Usando las relaciones de maxwell vista anteriormente, podemos decir que el coeficiente de expansión es 
-    $$\beta = \frac{1}{V}\left( \frac{\partial V}{\partial T} \right)_P=-\frac{1}{V}\left( \frac{\partial S}{\partial P} \right)_T$$
-    En el límite de cero absoluto la entropía es independiente de la presión. Por lo tanto $\lim_{T\to 0} \left(\frac{\partial S}{\partial P} \right)_T=0$.
-    
-    El coeficiente de expansión entonces se anua en el cero absoluto.$$\beta(T=0)=-\frac{1}{V}\lim_{T\to 0} \left(\frac{\partial S}{\partial P}\right)_T = 0$$
-    }
-    \item[Calor Específico]{De la ecuación de Gibbs podemos expresar los calores específicos como:
-    $$nC_V=T\left(\frac{\partial S}{\partial T}\right)_V$$
-    $$nC_P=T\left(\frac{\partial S}{\partial T}\right)_P$$
-    Al integrar ambas ecuaciones con con $S(T=0)=0$
-    $$S(T,V) = \int_0^T \frac{nC_V}{T'}dT'$$
-    $$S(T,P) = \int_0^T \frac{nC_P}{T'}dT'$$
-    Observamos que la entropía se anula en $T=0$ independientemente de la presión o el volumen. 
-    
-    }
-\end{description}
+\subsection{Coeficiente de expansión}
+Usando las relaciones de Maxwell vistas anteriormente, el coeficiente de expansión es:
+\begin{equation}
+\beta = \frac{1}{V}\left( \frac{\partial V}{\partial T} \right)_P = -\frac{1}{V}\left( \frac{\partial S}{\partial P} \right)_T
+\end{equation}
+
+En el límite de cero absoluto, la entropía es independiente de la presión. Por lo tanto:
+\begin{equation}
+\lim_{T\to 0} \left(\frac{\partial S}{\partial P} \right)_T = 0
+\end{equation}
+
+El coeficiente de expansión entonces se anula en el cero absoluto:
+\begin{equation}
+\beta(T=0) = -\frac{1}{V}\lim_{T\to 0} \left(\frac{\partial S}{\partial P}\right)_T = 0
+\end{equation}
+
+\subsection{Calor específico}
+De la ecuación de Gibbs podemos expresar los calores específicos como:
+\begin{equation}
+nC_V = T\left(\frac{\partial S}{\partial T}\right)_V
+\end{equation}
+\begin{equation}
+nC_P = T\left(\frac{\partial S}{\partial T}\right)_P
+\end{equation}
+
+Al integrar ambas ecuaciones, con $S(T=0)=0$, se obtiene:
+\begin{equation}
+S(T,V) = \int_0^T \frac{nC_V}{T'}\,dT'
+\end{equation}
+\begin{equation}
+S(T,P) = \int_0^T \frac{nC_P}{T'}\,dT'
+\end{equation}
+
+De esta forma, la entropía se anula en $T=0$ independientemente de la presión o el volumen.

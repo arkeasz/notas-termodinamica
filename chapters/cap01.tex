@@ -1,22 +1,24 @@
 \styledchapter[Relaciones de Maxwell]{Relaciones de Maxwell}
 
-Son cuatro relaciones entre derivadas parciales que permiten cambiar derivadas en la que interviene la entropía por otras en que intervienen variables tales como $p$, $V$, $T$.  
+Son cuatro relaciones entre derivadas parciales que permiten cambiar derivadas en las que interviene la entropía por otras en que intervienen variables tales como $p$, $V$, $T$.  
 Existe una relación por cada potencial termodinámico:
 
-$$
+\[
 \left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial p}{\partial S}\right)_V 
 \quad ;\quad 
 \left(\frac{\partial T}{\partial p}\right)_S=\left(\frac{\partial V}{\partial S}\right)_p 
-$$
-$$
+\]
+\[
 \left(\frac{\partial S}{\partial V}\right)_T=\left(\frac{\partial p}{\partial T}\right)_V 
 \quad ;\quad 
 \left(\frac{\partial S}{\partial p}\right)_T=-\left(\frac{\partial V}{\partial T}\right)_p
-$$
+\]
 
 En cuanto a la deducción de estas relaciones, la tarea es bastante sencilla, considerando la diferencial exacta de cada potencial termodinámico.
 
-Considerando la forma de una diferencial exacta:
+\section{Diferenciales exactas}
+
+Considerando la forma general de una diferencial exacta:
 \begin{equation}
     f(x,y) \rightarrow df = M(x,y)\,dx + N(x,y)\,dy \tag{1.1}
 \end{equation}
@@ -25,24 +27,33 @@ Considerando la forma de una diferencial exacta:
     N=\left( \frac{\partial f}{\partial y} \right)_x \tag{1.2}
 \end{equation}
 
-\begin{description}
-\item [Primer Caso $(S, V)$]  
+\section{Deducción de las Relaciones de Maxwell}
+
+\subsection{Primer Caso $(S, V)$}
 Usando la diferencial de energía interna:
-$$dU=TdS-pdV$$
+\[
+dU=TdS-pdV
+\]
 donde $x\rightarrow S$ y $y \rightarrow V$. Entonces:
-$$M=T(S,V), \quad N=-p(S,V)$$
-y reemplazando en la relación (1.2):
+\[
+M=T(S,V), \quad N=-p(S,V)
+\]
+reemplazando en la relación (1.2):
 \begin{equation}
     \boxed{
     \left( \frac{\partial  T}{\partial V} \right)_S = -\left( \frac{\partial p}{\partial  S} \right)_V
     }
 \end{equation}
 
-\item [Segundo Caso $(p, S)$]  
-Usando la ecuación diferencial de la entropía:
-$$dH=TdS+Vdp$$
+\subsection{Segundo Caso $(p, S)$}
+Usando la ecuación diferencial de la entalpía:
+\[
+dH=TdS+Vdp
+\]
 donde $x\rightarrow S$ y $y \rightarrow p$. Entonces:
-$$M=T(S,p), \quad N=V(S,p)$$
+\[
+M=T(S,p), \quad N=V(S,p)
+\]
 reemplazando:
 \begin{equation}
     \boxed{
@@ -50,11 +61,15 @@ reemplazando:
     }
 \end{equation}
 
-\item [Tercer Caso $(V,T)$]  
+\subsection{Tercer Caso $(V,T)$}
 Usando la ecuación diferencial de energía libre de Helmholtz:
-$$dF=-SdT-pdV$$
+\[
+dF=-SdT-pdV
+\]
 donde $x\rightarrow V$ y $y \rightarrow T$. Entonces:
-$$M=-S(V,T), \quad N=-p(V,T)$$
+\[
+M=-S(V,T), \quad N=-p(V,T)
+\]
 reemplazando:
 \begin{equation}
     \boxed{
@@ -62,16 +77,19 @@ reemplazando:
     }
 \end{equation}
 
-\item [Cuarto Caso $(p,T)$]  
+\subsection{Cuarto Caso $(p,T)$}
 Usando la ecuación diferencial de energía libre de Gibbs:
-$$dG=-SdT+Vdp$$
+\[
+dG=-SdT+Vdp
+\]
 donde $x\rightarrow p$ y $y \rightarrow T$. Entonces:
-$$M=-S(p,T), \quad N=V(p,T)$$
+\[
+M=-S(p,T), \quad N=V(p,T)
+\]
 reemplazando:
 \begin{equation}
     \boxed{
     \left( \frac{\partial  S}{\partial p} \right)_T = -\left( \frac{\partial V}{\partial  T} \right)_p
     }
 \end{equation}
-\end{description}
 

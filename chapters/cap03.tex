@@ -4,92 +4,107 @@
 \begin{center}
  La generalización de las leyes, en particular la Primera Ley, se traduce en una ecuación de balance de energía que considera la energía que entra y sale del sistema con el flujo de masa, el calor y el trabajo. Esto contrasta con los sistemas cerrados, donde solo se consideran los flujos de calor y trabajo. Al incorporar el transporte de energía asociado al movimiento de la materia, esta aproximación permite analizar estados estacionarios y transitorios, proporcionando una base robusta para la descripción de procesos que implican movimiento y transferencia de masa, como los que se encuentran en plantas químicas y centrales eléctricas.
 \end{center}
+
+\section{Primera Ley de la Termodinámica para sistemas abiertos}
+
 Por primera ley tenemos que 
 \begin{equation}
-    \delta  Q=dU+pdV-\mu dN \tag{3.1}
+    \delta Q = dU + pdV - \mu dN \tag{3.1}
 \end{equation}
 donde:
 \begin{multicols}{2}
-
 \begin{itemize}
     \item Q = Calor
     \item U = Energía interna
-    \item p = presión
+    \item p = Presión
     \item V = Volumen
-    \item $\mu$ = potencial químico
-    \item N = número de componentes del sistema
+    \item $\mu$ = Potencial químico
+    \item N = Número de componentes del sistema
 \end{itemize}
-    
 \end{multicols}
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.5\linewidth]{sistema_1.png}
-%     % \caption{Enter Caption}
-%     \label{fig:placeholder}
-% \end{figure}
 Donde $dE$ es el elemento infinitesimal de la energía interna que sale del sistema.
-Tenemos que $$dE=\mu dN$$ donde $\mu$ juega el rol de una función constante como multiplicador de lagrange.
-Luego: \begin{equation}
-    \delta Q= dU + \delta W -\mu dN \tag{3.2}
-\end{equation}Forma diferencial de la primera ley de la termodinámica para un sistema abierto y un monocomponente.
-Para la segunda ley de la termodinámica tenemos:
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=0.5\linewidth]{sistema_2.png}
-%     \caption{Enter Caption}
-%     \label{fig:placeholder}
-% \end{figure} es así que $$dS = \lambda \delta Q \xrightarrow{} \lambda = \frac{1}{T}$$reemplazando tendríamos
+Tenemos que 
+$$dE = \mu dN$$ 
+donde $\mu$ juega el rol de una función constante como multiplicador de Lagrange.
+
+Luego: 
 \begin{equation}
-    \delta  Q =  TdS \tag{3.3}
-\end{equation}Siendo la forma diferencial de la segunda ley de la termodinámica para un sistema abierto y monocomponente.
+    \delta Q = dU + \delta W - \mu dN \tag{3.2}
+\end{equation}
+
+Forma diferencial de la primera ley de la termodinámica para un sistema abierto y monocomponente.
+
+\section{Segunda Ley de la Termodinámica para sistemas abiertos}
+
+Para la segunda ley de la termodinámica tenemos:
+\begin{equation}
+    \delta Q = TdS \tag{3.3}
+\end{equation}
+Siendo la forma diferencial de la segunda ley de la termodinámica para un sistema abierto y monocomponente.
+
 Igualando la ec. (3.1) con la ec. (3.3) tenemos:
 \begin{equation}
-    TdS  = dU + pdV - \mu dN \tag{3.4}
+    TdS = dU + pdV - \mu dN \tag{3.4}
 \end{equation}
-El método de potenciales termodinámicos en la teoría clásica del calor  (termodinámica) se basa en la solución de la ecuación fundamental de la termodinámica (3.4).
 
-Analizaremos distintos casos usando diferentes variables independientes, esto es lo que llamaremos casos.
+El método de potenciales termodinámicos en la teoría clásica del calor (termodinámica) se basa en la solución de la ecuación fundamental de la termodinámica (3.4).
 
-\begin{description}
-    \item[\textbf{Primer Caso}  $(S,V,N)$] {
-        entonces 
-        \begin{equation}
-            dU = TdS - pdV + \mu dN  \tag{3.5}
-        \end{equation}
-        \begin{equation}
-             U = U(S,V,N) \tag{3.6}
-        \end{equation}
-siendo la ecuación de arriba el potencial termodinámico de la energía interna.
-        Por otro lado se cumple también:
-        \begin{equation}
-            dU = \left( \frac{\partial U}{\partial S} \right)_{V,N}dS +
-            \left( \frac{\partial U}{\partial V} \right)_{S,N}dV +
-            \left( \frac{\partial U}{\partial N} \right)_{S,V}dN \tag{3.7}
-        \end{equation}
-Observamos que tanto la ecuación (3.5) como la ecuación (3.7) representan la misma esencia matemática. Ambas ecuaciones pudiéndose igualar, obteniendo:
-        \begin{multicols}{3}
-                Temperatura \\[4pt]
-                $T=\left( \frac{\partial U}{\partial S} \right)_{V,N}$
-                \columnbreak \\
-                Presión \\[4pt]
-                $p=-\left( \frac{\partial U}{\partial V} \right)_{S,N}$
-                \columnbreak  \\
-                Potencial Químico \\[4pt]
-                $\mu=\left( \frac{\partial U}{\partial N} \right)_{S,V}$
-        \end{multicols}
-    }
-    \item [\textbf{Segundo Caso  $(T,V,N)$}] {
-    entonces tomando una función $F$ de tal manear que $F=F(V,T,N$ es nuestra función hipótesis. Por tanto:
-    \begin{equation}
-        dF=\left( \frac{\partial F}{\partial V} \right)_{T,N}dV + \left( \frac{\partial F}{\partial T} \right)_{V,N}dT + \left( \frac{\partial F}{\partial N} \right)_{V,T}dN \tag{3.8}
-    \end{equation}siendo la ecuación fundamental de la termodinámica hipotética.
-    Usando el recurso matemático $TdS = d[TS] -  SdT$ y reemplazándolo en la ec. (3.8), tenemos:
-    \begin{equation}
-        d[TS] - SdT = dU +pdV - \mu dN \tag{3.9}
-    \end{equation}
-    \begin{equation}
-        d[U-TS] = -pdV - SdT + \mu dN \tag{3.10}
-    \end{equation}
-    }
-\end{description}
+\section{Casos y potenciales termodinámicos}
+
+Analizaremos distintos casos usando diferentes variables independientes, esto es lo que llamaremos \textbf{casos}.
+
+\subsection{Primer Caso $(S,V,N)$}
+
+Entonces:
+\begin{equation}
+    dU = TdS - pdV + \mu dN \tag{3.5}
+\end{equation}
+\begin{equation}
+    U = U(S,V,N) \tag{3.6}
+\end{equation}
+Siendo la ecuación de arriba el potencial termodinámico de la energía interna.
+
+Por otro lado se cumple también:
+\begin{equation}
+    dU = 
+    \left( \frac{\partial U}{\partial S} \right)_{V,N} dS +
+    \left( \frac{\partial U}{\partial V} \right)_{S,N} dV +
+    \left( \frac{\partial U}{\partial N} \right)_{S,V} dN \tag{3.7}
+\end{equation}
+
+Observamos que tanto la ecuación (3.5) como la ecuación (3.7) representan la misma esencia matemática. Ambas ecuaciones pueden igualarse, obteniendo:
+
+\begin{multicols}{3}
+Temperatura \\[4pt]
+$T = \left( \frac{\partial U}{\partial S} \right)_{V,N}$
+
+\columnbreak
+
+Presión \\[4pt]
+$p = -\left( \frac{\partial U}{\partial V} \right)_{S,N}$
+
+\columnbreak
+
+Potencial Químico \\[4pt]
+$\mu = \left( \frac{\partial U}{\partial N} \right)_{S,V}$
+\end{multicols}
+
+\subsection{Segundo Caso $(T,V,N)$}
+
+Tomando una función $F$ de tal manera que $F = F(T,V,N)$ sea nuestra función hipótesis. Por tanto:
+\begin{equation}
+    dF =
+    \left( \frac{\partial F}{\partial V} \right)_{T,N} dV +
+    \left( \frac{\partial F}{\partial T} \right)_{V,N} dT +
+    \left( \frac{\partial F}{\partial N} \right)_{V,T} dN \tag{3.8}
+\end{equation}
+Siendo la ecuación fundamental de la termodinámica hipotética.
+
+Usando el recurso matemático $TdS = d[TS] - SdT$ y reemplazándolo en la ec. (3.8), tenemos:
+\begin{equation}
+    d[TS] - SdT = dU + pdV - \mu dN \tag{3.9}
+\end{equation}
+\begin{equation}
+    d[U - TS] = -pdV - SdT + \mu dN \tag{3.10}
+\end{equation}

@@ -1,40 +1,80 @@
 \styledchapter[Ciclo de Carnot]{Ciclo de Carnot}
 
-Es un proceso cíclico reversible que utiliza un gas ideal, y que consta de dos transformaciones isotérmicas y dos adiabáticas.
+El ciclo de Carnot es un proceso cíclico reversible que utiliza un gas ideal, compuesto por dos transformaciones isotérmicas y dos adiabáticas.  
+Representa el ciclo teórico más eficiente posible entre dos fuentes de calor que operan a temperaturas distintas.
 
-\textbf{Máquina de Carnot}
-En una máquina de carnot el ciclo se recorre en sentido horario para que el gas produzca trabajo siempre que la sustancia del trabajo sea un gas ideal
+\section{Máquina de Carnot}
 
-
-\begin{figure}[h]
-    % \includegraphics[width=0.5\linewidth]{maquina_de_carnot.png}
-    \centering
-    \caption{Máquina de Carnot}
-    % \label{Máquina de Carnot}
-\end{figure}
-
-\begin{description}
-    \item[$1\rightarrow 2$ Expansión Isoterma]{El gas absorbe una cantidad de calor $Q_1$, manteniéndose a la temperatura del foco caliente $T_H$}
-    \item[$2\rightarrow 3$ Expansión Adiabática]{El gas se enfría sin pérdida de calor hasta la temperatura del foco frío $T_C$} 
-    \item[$3\rightarrow 4$ Compresión Isoterma]{El gas cede el calor $Q_2$ al foco frío sin variar la temperatura.} 
-    \item[$4\rightarrow 1$ Compresión Adiabática]{El gas se calienta hasta la temperatura del foco caliente $T_H$, cerrando el ciclo.} 
-\end{description}
-
-
-\textbf{Refrigerador de Carnot}
-A diferencia de la máquina de Carnot, el ciclo se recorre en sentido antihorario, ya que el trabajo es negativo, puesto que, es consumido por el gas.
-
+En una máquina de Carnot el ciclo se recorre en sentido horario, de manera que el gas realiza trabajo neto.  
+El principio fundamental es que todo el calor absorbido del foco caliente se convierte parcialmente en trabajo, y el resto se cede al foco frío.
 
 \begin{figure}[h]
     \centering
-    % \includegraphics[width=0.5\linewidth]{refrigerador_de_carnot.png}
-    \caption{Refrigerador de Carnot}
-    \label{fig:placeholder}
+    % \includegraphics[width=0.5\linewidth]{figures/maquina_de_carnot.png}
+    \caption{Esquema de una máquina de Carnot.}
+    \label{fig:maquina-carnot}
 \end{figure}
 
+El ciclo se describe con las siguientes etapas:
+
 \begin{description}
-    \item[$1\rightarrow 2$ Expansión Adiabática]{El gas se enfría sin pérdida de calor hasta la temperatura del foco frío $T_C$} 
-    \item[$2\rightarrow 3$ Expansión Isoterma]{El gas se mantiene a la temperatura del foco frío $T_C$ y durante la expansión, absorbe el calor $Q_2$ de dicho foco}
-    \item[$3\rightarrow 4$ Compresión Adiabática]{El gas se calienta hasta la temperatura del foco caliente $T_H$, sin intercambio de calor.} 
-    \item[$4\rightarrow 1$ Compresión Isoterma]{El gas cede el calor $Q_1$ al foco caliente manteniéndose a la temperatura de dicho foco $T_H$ y cerrando el ciclo.} 
+    \item[$1\rightarrow 2$ Expansión Isotérmica]  
+    El gas absorbe una cantidad de calor $Q_1$, manteniéndose a la temperatura del foco caliente $T_H$. El volumen aumenta y se realiza trabajo sobre el entorno.
+
+    \item[$2\rightarrow 3$ Expansión Adiabática]  
+    El gas continúa expandiéndose sin intercambio de calor ($Q=0$), enfriándose hasta alcanzar la temperatura del foco frío $T_C$.
+
+    \item[$3\rightarrow 4$ Compresión Isotérmica]  
+    El gas cede calor $Q_2$ al foco frío a temperatura constante $T_C$, mientras el volumen disminuye.
+
+    \item[$4\rightarrow 1$ Compresión Adiabática]  
+    El gas se comprime sin intercambio de calor ($Q=0$), aumentando su temperatura hasta recuperar $T_H$ y cerrando el ciclo.
 \end{description}
+
+La eficiencia térmica de la máquina de Carnot se define como:
+\[
+\eta = 1 - \frac{T_C}{T_H}
+\]
+donde las temperaturas se expresan en Kelvin.  
+Este límite representa el máximo rendimiento posible de cualquier máquina térmica ideal entre dos focos.
+
+\section{Refrigerador de Carnot}
+
+El refrigerador de Carnot opera con el mismo principio, pero el ciclo se recorre en sentido antihorario.  
+En este caso, el gas consume trabajo externo para transferir calor desde el foco frío hacia el foco caliente.
+
+\begin{figure}[h]
+    \centering
+    % \includegraphics[width=0.5\linewidth]{figures/refrigerador_de_carnot.png}
+    \caption{Refrigerador de Carnot.}
+    \label{fig:refrigerador-carnot}
+\end{figure}
+
+Las etapas del ciclo son las siguientes:
+
+\begin{description}
+    \item[$1\rightarrow 2$ Expansión Adiabática]  
+    El gas se enfría al expandirse sin intercambio de calor hasta la temperatura del foco frío $T_C$.
+
+    \item[$2\rightarrow 3$ Expansión Isotérmica]  
+    El gas, a temperatura constante $T_C$, absorbe el calor $Q_2$ del foco frío.
+
+    \item[$3\rightarrow 4$ Compresión Adiabática]  
+    El gas se comprime sin intercambio de calor, elevando su temperatura hasta $T_H$.
+
+    \item[$4\rightarrow 1$ Compresión Isotérmica]  
+    El gas cede el calor $Q_1$ al foco caliente, manteniéndose a temperatura $T_H$, y el ciclo se repite.
+\end{description}
+
+El coeficiente de rendimiento (COP) de un refrigerador de Carnot se expresa como:
+\[
+COP_{ref} = \frac{T_C}{T_H - T_C}
+\]
+lo que indica la relación entre el calor extraído del foco frío y el trabajo consumido.
+
+\section{Importancia del Ciclo de Carnot}
+
+El ciclo de Carnot es una referencia teórica: ningún motor real puede superarlo en eficiencia.  
+Toda desviación práctica respecto al rendimiento ideal se debe a irreversibilidades, fricciones, pérdidas térmicas y no idealidades del gas.
+
+Por eso, el análisis de Carnot no solo establece un límite, sino que también ofrece un criterio fundamental para evaluar la calidad de los sistemas térmicos reales.

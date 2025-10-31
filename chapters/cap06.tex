@@ -1,1 +1,114 @@
 \styledchapter[Termodinámica Relativista]{Termodinámica Relativista}
+\section{Introducción}
+La termodinámica relativista surge como una extensión natural de la teoría clásica 
+para describir sistemas en los que las velocidades son comparables con la de la luz. 
+Este trabajo busca exponer su fundamento histórico y formal, destacando los intentos 
+de unificación y las formulaciones modernas más aceptadas.
+
+%----------------------------------------------------
+\section{Antecedentes Históricos}
+La teoría de la relatividad tuvo profundas implicancias en la termodinámica por dos razones fundamentales. 
+En primer lugar, los cuerpos calientes son ligeramente más pesados que los fríos, 
+ya que sus átomos o moléculas poseen mayor velocidad y, por tanto, mayor masa efectiva. 
+En segundo lugar, debido a que ninguna partícula puede moverse más rápido que la luz, 
+la distribución de velocidades de las partículas debe reflejar esa limitación física.
+
+Ambos efectos son, sin embargo, extremadamente pequeños. 
+Solo bajo condiciones de temperatura extraordinariamente altas las correcciones relativistas a las fórmulas clásicas adquieren relevancia numérica. Ni siquiera las condiciones del interior solar, con millones de kelvin, son lo bastante extremas. 
+En la práctica, los efectos relativistas solo se vuelven significativos en objetos como las enanas blancas, donde además se entrelazan con los efectos cuánticos debido a la alta densidad y la superposición de las longitudes de onda de de Broglie de los electrones libres.
+
+Históricamente, el intento de unificar ambas teorías dio lugar a distintas formulaciones y controversias, entre ellas la conocida como \textit{debate Ott–Planck}, acerca de cómo debe transformarse la temperatura entre sistemas inerciales en movimiento. Mientras que Planck propuso que la temperatura relativista se transforma como $T = T_0 / \gamma$, Ott sugirió la relación opuesta $T = \gamma T_0$, lo que generó una prolongada discusión sobre la correcta interpretación física. Entre los aportes iniciales destacan:
+\begin{itemize}
+    \item \textbf{Planck (1908):} introdujo la idea de una termodinámica consistente con la relatividad especial.
+    \item \textbf{Tolman (1934):} formuló las bases para una teoría de fluidos relativistas.
+    \item \textbf{Ott (1963):} reabrió el debate sobre la transformación de la temperatura.
+    \item \textbf{Israel y Stewart (1970s):} desarrollaron la teoría moderna de los fluidos disipativos relativistas.
+\end{itemize}
+Estos trabajos conforman la base conceptual de la termodinámica relativista actual.
+
+%----------------------------------------------------
+\section{Fundamento Teórico}
+
+\subsection{Termodinámica Clásica}
+
+La termodinámica clásica estudia el comportamiento macroscópico de los sistemas físicos a través de variables como la energía interna $U$, la entropía $S$, la temperatura $T$, la presión $P$ y el volumen $V$.  
+Estas magnitudes describen el estado de equilibrio de un sistema y están relacionadas mediante ecuaciones de estado y las leyes fundamentales de la termodinámica.
+
+El \textbf{primer principio} establece la conservación de la energía:
+\[
+dU = \delta Q - \delta W,
+\]
+donde $\delta Q$ representa el calor absorbido por el sistema y $\delta W$ el trabajo realizado por él.  
+El \textbf{segundo principio} introduce la noción de entropía $S$ y el carácter irreversible de los procesos naturales:
+\[
+dS \geq \frac{\delta Q}{T}.
+\]
+El \textbf{tercer principio}, conocido como postulado de Nernst, indica que la entropía de un sistema perfecto tiende a cero al aproximarse al cero absoluto.
+
+Estas leyes proporcionan una descripción coherente de los procesos energéticos en sistemas macroscópicos bajo el supuesto de que el tiempo y el espacio son absolutos, es decir, independientes del estado de movimiento del observador.  
+Este supuesto será el punto donde la Relatividad Especial impone su corrección conceptual.
+
+\subsection{Relatividad Especial}
+
+La Relatividad Especial, formulada por Einstein en 1905, parte del principio de que las leyes de la física son las mismas en todos los sistemas inerciales y que la velocidad de la luz en el vacío, $c$, es constante e independiente del movimiento de la fuente o del observador.  
+Estas afirmaciones conducen a la estructura geométrica del espacio–tiempo de Minkowski, descrita por el intervalo invariante:
+\[
+ds^2 = c^2 dt^2 - dx^2 - dy^2 - dz^2.
+\]
+Las transformaciones de Lorentz garantizan que este intervalo se conserve entre observadores en movimiento relativo, reemplazando la noción clásica de tiempo absoluto por un tiempo dependiente del estado de movimiento.
+
+En este marco, la energía y el momento forman un cuadrivector $(E/c, \vec{p})$, cuya norma invariante define la masa en reposo:
+\[
+E^2 = (pc)^2 + (m_0 c^2)^2.
+\]
+Así, la energía interna de un sistema deja de ser una magnitud puramente escalar y pasa a formar parte del tensor energía–momento $T^{\mu\nu}$, que describe el flujo de energía y momento en el espacio–tiempo.  
+La introducción de esta estructura tensorial permitirá expresar las leyes termodinámicas de forma covariante.
+
+\subsection{Compatibilidad entre ambas teorías}
+
+La conciliación entre la termodinámica y la relatividad exige reformular las leyes de conservación y las variables termodinámicas de modo que sean invariantes o covariantes bajo transformaciones de Lorentz.  
+En particular, las magnitudes extensivas (como la energía o la entropía total) deben formar parte de tensores o cuadrivectores, mientras que las magnitudes intensivas (como la temperatura o la presión) requieren una definición cuidadosa en sistemas en movimiento.
+
+Uno de los principales desafíos históricos ha sido determinar cómo se transforma la temperatura entre sistemas inerciales.  
+Las propuestas de Planck, Einstein, Ott y Landsberg difieren en si la temperatura de un cuerpo en movimiento es menor, mayor o igual a la medida en reposo:
+\[
+T' = \frac{T}{\gamma}, \quad T' = \gamma T, \quad \text{o bien} \quad T' = T.
+\]
+Esta discusión, conocida como el \textit{debate Ott–Planck}, refleja la dificultad de definir el equilibrio térmico entre observadores que no comparten el mismo marco de referencia.
+
+Desde un punto de vista moderno, la formulación covariante de la termodinámica relativista se basa en el tensor energía–momento $T^{\mu\nu}$ y en el flujo de entropía $S^{\mu}$, los cuales satisfacen las ecuaciones de conservación:
+\[
+\nabla_{\mu} T^{\mu\nu} = 0, \qquad \nabla_{\mu} S^{\mu} \geq 0.
+\]
+Estas expresiones garantizan la conservación de la energía y el momento, así como la irreversibilidad de los procesos, en concordancia con la segunda ley.
+
+En consecuencia, la termodinámica relativista no invalida los principios clásicos, sino que los amplía al exigir su validez en todos los sistemas inerciales, proporcionando una descripción coherente de los procesos térmicos a altas velocidades y altas energías.
+
+
+%----------------------------------------------------
+\section{Formulación Matemática}
+
+En el marco relativista, el estado termodinámico de un sistema continuo se describe mediante el tensor energía–momento \( T^{\mu\nu} \), la densidad de entropía \( s \) y el flujo de materia \( N^{\mu} \).  
+Las ecuaciones fundamentales de conservación adoptan la forma covariante:
+\[
+\nabla_{\mu} T^{\mu\nu} = 0, \qquad \nabla_{\mu} N^{\mu} = 0.
+\]
+El equilibrio térmico se alcanza cuando el campo de cuatro–velocidad \( u^{\mu} \) y la temperatura \( T \) son tales que el gradiente del potencial de Tolman \( T u^{0} \) permanece constante en el espacio–tiempo.  
+Estas relaciones generalizan las leyes clásicas de la termodinámica, garantizando su validez en sistemas en movimiento o bajo campos gravitatorios débiles.
+
+%----------------------------------------------------
+\section{Aplicaciones}
+
+La termodinámica relativista encuentra aplicación en numerosos contextos de la física moderna, 
+especialmente en sistemas donde las velocidades de las partículas se aproximan a la de la luz 
+o donde las densidades de energía son extremadamente elevadas. 
+A continuación, se presentan algunos casos representativos que ilustran su importancia.
+
+\subsection{Gas relativista ideal}
+La energía cinética de las partículas es comparable con su energía en reposo, lo que ocurre en plasmas o en los primeros instantes del universo.
+
+\subsection{Radiación térmica y presión de radiación}
+Es un caso extremo de gas relativista, donde los fotones ejercen una presión que influye en el equilibrio de las estrellas y en el fondo cósmico de microondas
+
+\subsection{Fluidos relativistas en astrofísica y cosmología}
+Como los de estrellas de neutrones o el universo temprano, la energía, la presión y el movimiento se describen de forma unificada bajo campos gravitatorios intensos.
