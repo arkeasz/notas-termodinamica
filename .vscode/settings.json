@@ -4,6 +4,16 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/Thumbs.db": true
+        "**/Thumbs.db": true,
+        "**/*.bbl": true,
+        "**/*.aux": true,
+        "**/*.bcf": true,
+        "**/*.blg": true,
+        "**/*.fls": true,
+        "**/*.fdb_latexmk": true,
+        "**/*.log": true,
+        "**/*.xml": true,
+        "**/*.gz": true,
+        "**/*.toc": true,
     }
 }
